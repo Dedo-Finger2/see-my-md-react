@@ -1,3 +1,4 @@
+import FileContent from "./components/FileContent";
 import Sidebar from "./components/Sidebar";
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
         <Sidebar />
       </div>
       {/* Content */}
-      <div className="h-screen"></div>
+      <div className="h-screen">
+        <FileContent />
+      </div>
     </div>
   );
 }
