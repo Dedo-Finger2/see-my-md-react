@@ -1,5 +1,6 @@
 import FileContent from "./components/FileContent";
 import Sidebar from "./components/Sidebar";
+import Header from "./components/FileContent/Header";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
         <Sidebar />
       </div>
       {/* Content */}
-      <div className="h-screen">
+      <div className="h-screen overflow-y-auto">
+        <Header />
         <FileContent />
       </div>
     </div>
