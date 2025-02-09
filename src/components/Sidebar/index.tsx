@@ -1,4 +1,4 @@
-import SidebarFileListItem from "../SidebarFileListItem";
+import ListItem from "./ListItem";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -11,10 +11,10 @@ function Sidebar() {
         <Header />
         {/* Item list */}
         <div className="relative p-4 flex flex-col gap-1 items-center text-xs py-6">
-          <SidebarFileListItem fileName="Welcome" selected={true} />
-          <SidebarFileListItem fileName="Como Tailwind revolucionou a indústria do front-end" />
-          <SidebarFileListItem fileName="Minha opinião sobre sexo antes de um relacionamento" />
-          <SidebarFileListItem fileName="Segredos de Portugal" />
+          <ListItem fileName="Welcome" selected={true} />
+          <ListItem fileName="Como Tailwind revolucionou a indústria do front-end" />
+          <ListItem fileName="Minha opinião sobre sexo antes de um relacionamento" />
+          <ListItem fileName="Segredos de Portugal" />
         </div>
       </div>
       {/* Bottom Menu */}

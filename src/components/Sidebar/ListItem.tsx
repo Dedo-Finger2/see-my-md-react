@@ -3,7 +3,7 @@ type SidebarFileListItemProps = {
   selected?: boolean;
 };
 
-function SidebarFileListItem({ fileName, selected }: SidebarFileListItemProps) {
+function ListItem({ fileName, selected }: SidebarFileListItemProps) {
   return (
     <div
       className={`${
@@ -15,4 +15,4 @@ function SidebarFileListItem({ fileName, selected }: SidebarFileListItemProps) {
   );
 }
 
-export default SidebarFileListItem;
+export default ListItem;
