@@ -1,8 +1,8 @@
-import FileContent from "./components/FileContent";
-import Sidebar from "./components/Sidebar";
-import Header from "./components/FileContent/Header";
+import FileContent from "./../components/FileContent";
+import Sidebar from "./../components/Sidebar";
+import Header from "./../components/FileContent/Header";
 
-function App() {
+function Home() {
   return (
     // Wrapper
     <div className="grid grid-cols-[300px_1fr]">
@@ -19,4 +19,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
