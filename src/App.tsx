@@ -1,7 +1,11 @@
 function App() {
   return (
-    <div>
-      <h2>Oi</h2>
+    // Wrapper
+    <div className="grid grid-cols-[300px_1fr]">
+      {/* Sidebar */}
+      <div className="bg-neutral-800 h-screen"></div>
+      {/* Content */}
+      <div className="h-screen"></div>
     </div>
   );
 }
