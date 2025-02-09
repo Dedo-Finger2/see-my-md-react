@@ -6,7 +6,7 @@ function Sidebar() {
   return (
     // Wrapper
     <div className="flex flex-col justify-between text-neutral-100 w-full border-x border-neutral-700 h-full">
-      <div>
+      <div className="h-full overflow-y-auto">
         {/* Header */}
         <Header />
         {/* Item list */}
