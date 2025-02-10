@@ -10,6 +10,7 @@ type InputProps = {
     | "submit";
   placeholder?: string;
   descriptionContent?: string;
+  isRequired?: boolean;
 };
 
 function Input({
@@ -17,6 +18,7 @@ function Input({
   type,
   descriptionContent,
   placeholder,
+  isRequired,
 }: InputProps) {
   return (
     <div className="flex flex-col gap-2">
@@ -29,6 +31,7 @@ function Input({
       )}
       <input
         type={type}
+        required={isRequired}
         placeholder={placeholder}
         className="w-full outline-1 outline-neutral-400 rounded-xs p-1 text-xs selection:bg-violet-600 selection:text-violet-50"
       />
