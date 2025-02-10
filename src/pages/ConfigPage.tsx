@@ -22,7 +22,7 @@ function ConfigPage() {
             </div>
           </Link>
           {/* Title */}
-          <div className="font-bold text-2xl">
+          <div className="select-none font-bold text-2xl">
             <span>Configure your</span>{" "}
             <span className="text-purple-500 underline underline-offset-8">
               favorite
