@@ -17,7 +17,7 @@ function Header() {
         </div>
         {/* File Name */}
         <div>
-          <span className="text-xs text-neutral-300 font-semibold">
+          <span className="text-xs text-neutral-300 font-semibold select-none">
             Welcome
           </span>
         </div>
