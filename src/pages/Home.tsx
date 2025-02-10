@@ -34,6 +34,7 @@ function Home() {
         username: configData?.username ?? "",
       });
       setFiles(repoFiles);
+      setSelectedFile(repoFiles[0]);
     }
     fetchData();
   }, []);
@@ -60,7 +61,7 @@ function Home() {
       {/* Content */}
       <div className="h-screen overflow-y-auto">
         <Header />
-        <FileContent />
+        <FileContent file={selectedFile} />
       </div>
     </div>
   );
