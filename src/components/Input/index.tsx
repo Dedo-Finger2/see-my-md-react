@@ -11,6 +11,8 @@ type InputProps = {
   placeholder?: string;
   descriptionContent?: string;
   isRequired?: boolean;
+  value?: any;
+  setValue?: React.Dispatch<React.SetStateAction<any>>;
 };
 
 function Input({
@@ -19,6 +21,8 @@ function Input({
   descriptionContent,
   placeholder,
   isRequired,
+  value,
+  setValue,
 }: InputProps) {
   return (
     <div className="flex flex-col gap-2">
@@ -30,6 +34,8 @@ function Input({
         ""
       )}
       <input
+        value={value}
+        onChange={setValue ? (e) => setValue(e.target.value) : () => {}}
         type={type}
         required={isRequired}
         placeholder={placeholder}
