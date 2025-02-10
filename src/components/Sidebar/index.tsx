@@ -2,8 +2,13 @@ import ListItem from "./ListItem";
 import Header from "./Header";
 import Footer from "./Footer";
 import SearchBar from "./SearchBar";
+import { RepoFile } from "../../api/repository/get-all-repo-files";
 
-function Sidebar() {
+type SidebarProps = {
+  files: RepoFile[];
+};
+
+function Sidebar({ files }: SidebarProps) {
   return (
     // Wrapper
     <div className="flex flex-col justify-between text-neutral-100 w-full border-x border-neutral-700 h-full">
@@ -13,10 +18,13 @@ function Sidebar() {
         <SearchBar />
         {/* Item list */}
         <div className="relative p-4 flex flex-col gap-1 items-center text-xs py-6">
-          <ListItem fileName="Welcome" selected={true} />
-          <ListItem fileName="Como Tailwind revolucionou a indústria do front-end" />
-          <ListItem fileName="Minha opinião sobre sexo antes de um relacionamento" />
-          <ListItem fileName="Segredos de Portugal" />
+          {files.map((file, idx) => (
+            <ListItem
+              key={file.id}
+              fileName={file.shortName}
+              selected={idx === 0}
+            />
+          ))}
         </div>
       </div>
       {/* Bottom Menu */}

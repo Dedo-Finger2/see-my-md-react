@@ -45,7 +45,7 @@ function Home() {
     <div className="grid grid-cols-[300px_1fr]">
       {/* Sidebar */}
       <div className="bg-neutral-800 h-screen">
-        <Sidebar />
+        <Sidebar files={files} />
       </div>
       {/* Content */}
       <div className="h-screen overflow-y-auto">
