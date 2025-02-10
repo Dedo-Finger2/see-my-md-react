@@ -1,4 +1,4 @@
-import PlatformForm from "./PlatformForm";
+import GitlabForm from "../PlatformForms/Gitlab";
 
 type PlatformSidebarProps = {
   icon: React.ReactNode;
@@ -15,7 +15,10 @@ function PlatformSidebar({ icon, name }: PlatformSidebarProps) {
         </div>
       </div>
       {/* Form */}
-      <PlatformForm />
+      <div className="flex flex-col px-14 w-full">
+        {/* <PlatformForm /> */}
+        <GitlabForm />
+      </div>
     </div>
   );
 }
