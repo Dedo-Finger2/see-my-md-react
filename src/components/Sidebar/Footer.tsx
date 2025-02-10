@@ -1,6 +1,7 @@
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import { HiOutlineCog8Tooth } from "react-icons/hi2";
 import { RiExpandUpDownLine } from "react-icons/ri";
+import { Link } from "react-router";
 
 function Footer() {
   return (
@@ -15,9 +16,12 @@ function Footer() {
         <span className="p-1 rounded-sm transition-colors linear hover:bg-neutral-600/50">
           <AiOutlineQuestionCircle size={20} />
         </span>
-        <span className="p-1 rounded-sm transition-colors linear hover:bg-neutral-600/50">
+        <Link
+          className="p-1 cursor-default rounded-sm transition-colors linear hover:bg-neutral-600/50"
+          to="/config"
+        >
           <HiOutlineCog8Tooth size={20} />
-        </span>
+        </Link>
       </div>
     </div>
   );
