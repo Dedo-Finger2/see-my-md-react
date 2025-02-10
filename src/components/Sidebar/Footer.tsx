@@ -13,14 +13,20 @@ function Footer() {
         </div>
       </div>
       <div className="flex gap-2 text-neutral-400">
-        <span className="p-1 rounded-sm transition-colors linear hover:bg-neutral-600/50">
+        <span className="group relative p-1 rounded-sm transition-colors linear hover:bg-neutral-600/50">
           <AiOutlineQuestionCircle size={20} />
+          <div className="hidden select-none uppercase absolute left-0 w-max bottom-8 px-2 bg-neutral-700 text-xs p-1 rounded-sm group-hover:block">
+            Coming Soon...
+          </div>
         </span>
         <Link
-          className="p-1 cursor-default rounded-sm transition-colors linear hover:bg-neutral-600/50"
+          className="group relative p-1 cursor-default rounded-sm transition-colors linear hover:bg-neutral-600/50"
           to="/config"
         >
           <HiOutlineCog8Tooth size={20} />
+          <div className="hidden select-none absolute left-0 w-max bottom-8 px-2 bg-neutral-700 text-xs p-1 rounded-sm group-hover:block">
+            Config
+          </div>
         </Link>
       </div>
     </div>
