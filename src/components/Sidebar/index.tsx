@@ -20,7 +20,7 @@ function Sidebar({ files, selectedFile, setSelectedFile }: SidebarProps) {
         <SearchBar />
         {/* Item list */}
         <div className="relative p-4 flex flex-col gap-1 items-center text-xs py-6">
-          {files.map((file, idx) => (
+          {files.map((file) => (
             <ListItem
               setSelectedFile={setSelectedFile}
               key={file.id}
