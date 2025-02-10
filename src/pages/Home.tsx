@@ -15,6 +15,12 @@ import localStorageGetApiKey from "../api/repository/local-storage-get-api-key";
 
 function Home() {
   const [files, setFiles] = useState<RepoFile[]>([]);
+  const [selectedFile, setSelectedFile] = useState<RepoFile>({
+    id: "",
+    path: "",
+    shortName: "",
+  });
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -45,7 +51,11 @@ function Home() {
     <div className="grid grid-cols-[300px_1fr]">
       {/* Sidebar */}
       <div className="bg-neutral-800 h-screen">
-        <Sidebar files={files} />
+        <Sidebar
+          setSelectedFile={setSelectedFile}
+          selectedFile={selectedFile}
+          files={files}
+        />
       </div>
       {/* Content */}
       <div className="h-screen overflow-y-auto">
