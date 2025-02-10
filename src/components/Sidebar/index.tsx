@@ -1,6 +1,7 @@
 import ListItem from "./ListItem";
 import Header from "./Header";
 import Footer from "./Footer";
+import SearchBar from "./SearchBar";
 
 function Sidebar() {
   return (
@@ -9,6 +10,7 @@ function Sidebar() {
       <div className="h-full overflow-y-auto">
         {/* Header */}
         <Header />
+        <SearchBar />
         {/* Item list */}
         <div className="relative p-4 flex flex-col gap-1 items-center text-xs py-6">
           <ListItem fileName="Welcome" selected={true} />
