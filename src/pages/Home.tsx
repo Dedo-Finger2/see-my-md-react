@@ -60,7 +60,7 @@ function Home() {
 			</div>
 			{/* Content */}
 			<div className="h-screen overflow-y-auto">
-				<Header />
+				<Header file={selectedFile} />
 				<FileContent file={selectedFile} />
 			</div>
 		</div>
