@@ -9,7 +9,7 @@ function ComingSoonPlatforms() {
 			<h1 className="text-center text-2xl text-neutral-400 italic">
 				COMING SOON...
 			</h1>
-			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 content-center gap-4">
+			<div className="grid grid-cols-1 place-items-center lg:grid-cols-2 xl:grid-cols-3 gap-4">
 				<PlatformCard
 					icon={<FaGithub />}
 					title="Github"
