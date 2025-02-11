@@ -32,7 +32,7 @@ function Body({ file }: BodyProps) {
 
 
 	return (
-		<div className="mt-24 flex flex-col gap-4 px-96 text-neutral-200 max-h-screen">
+		<div className="mt-24 flex flex-col gap-4 px-8 lg:px-36 2xl:px-96 text-neutral-200 max-h-screen">
 			{/* Title */}
 			<h1 className="text-3xl font-bold">{file.shortName ?? "Loading..."}
 			</h1>
