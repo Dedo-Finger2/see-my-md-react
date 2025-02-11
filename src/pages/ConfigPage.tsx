@@ -1,12 +1,17 @@
+import { useState } from "react";
+
 import { IoArrowBack } from "react-icons/io5";
 import { Link } from "react-router";
 import { FaGitlab } from "react-icons/fa6";
+import { IoMdMenu } from "react-icons/io";
 
 import PlatformSidebar from "../components/Config/PlatformSidebar";
 import ComingSoonPlatforms from "../components/Config/ComingSoonPlatforms";
 import SuportedPlatforms from "../components/Config/SuportedPlatforms";
 
 function ConfigPage() {
+	const [isVisible, setIsVisible] = useState(true)
+
 	return (
 		<div className="flex items-center justify-between w-full h-screen">
 			{/* Center box */}
@@ -36,7 +41,10 @@ function ConfigPage() {
 				</div>
 			</div>
 			{/* Sidebar */}
-			<PlatformSidebar icon={<FaGitlab />} name="Gitlab" />
+			<div className="p-1 rounded-md absolute z-10 text-neutral-300 top-8 right-10 hover:bg-neutral-500/30" onClick={() => setIsVisible(prev => !prev)}>
+				<IoMdMenu size={20} />
+			</div>
+			<PlatformSidebar isVisible={isVisible} icon={<FaGitlab />} name="Gitlab" />
 		</div>
 	);
 }
