@@ -12,13 +12,6 @@ function SuportedPlatforms() {
 				description="Lorem ipsum dolor sit amet."
 				isSelected={false}
 			/>
-			<PlatformCard
-				icon={<FaGitlab />}
-				title="Gitlab"
-				isDisabled={false}
-				description="Lorem ipsum dolor sit amet."
-				isSelected={false}
-			/>
 		</div>
 	);
 }
