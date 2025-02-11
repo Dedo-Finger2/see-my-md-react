@@ -14,7 +14,7 @@ function PlatformSidebar({ icon, name, isVisible }: PlatformSidebarProps) {
 	}, [isVisible])
 
 	return (
-		<div className={`${!isVisible ? "hidden" : ""} transition-transform ease-in-out relative text-neutral-300 h-full w-100 bg-neutral-800 border-l border-l-neutral-700 py-4`}>
+		<div className={`${!isVisible ? "hidden" : ""} flex flex-col items-center text-neutral-300 h-full w-90 sm:w-100 bg-neutral-800 border-l border-l-neutral-700 py-4 absolute top-0 right-0`}>
 			<div className="p-6">
 				<div className="flex flex-col items-center gap-2">
 					{icon}
