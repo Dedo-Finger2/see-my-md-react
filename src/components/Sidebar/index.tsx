@@ -10,9 +10,10 @@ type SidebarProps = {
 	files: RepoFile[];
 	selectedFile: RepoFile;
 	setSelectedFile: React.Dispatch<React.SetStateAction<RepoFile>>;
+	isVisible: boolean;
 };
 
-function Sidebar({ files, selectedFile, setSelectedFile }: SidebarProps) {
+function Sidebar({ files, selectedFile, setSelectedFile, isVisible }: SidebarProps) {
 	const [searchValue, setSearchValue] = useState("")
 	const [filteredFiles, setFilteredFiles] = useState<RepoFile[]>(files)
 
@@ -23,7 +24,7 @@ function Sidebar({ files, selectedFile, setSelectedFile }: SidebarProps) {
 
 	return (
 		// Wrapper
-		<div className="flex flex-col justify-between text-neutral-100 w-full border-x border-neutral-700 h-full">
+		<div className={`${!isVisible ? "hidden" : ""} flex flex-col justify-between text-neutral-100 w-full border-x border-neutral-700 h-full`}>
 			<div className="h-full overflow-y-auto">
 				{/* Header */}
 				<Header />

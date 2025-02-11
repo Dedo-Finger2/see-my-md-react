@@ -12,6 +12,7 @@ import getAllRepoFiles, {
 } from "../api/repository/get-all-repo-files";
 import localStorageGetConfigData from "../api/repository/local-storage-get-config-data";
 import localStorageGetApiKey from "../api/repository/local-storage-get-api-key";
+import { IoMdMenu } from "react-icons/io";
 
 function Home() {
 	const [files, setFiles] = useState<RepoFile[]>([]);
@@ -20,6 +21,7 @@ function Home() {
 		path: "loading...",
 		shortName: "loading...",
 	});
+	const [isVisible, setIsVisible] = useState(true)
 
 	const navigate = useNavigate();
 
@@ -49,10 +51,14 @@ function Home() {
 
 	return (
 		// Wrapper
-		<div className="grid grid-cols-[300px_1fr]">
+		<div className={` ${!isVisible ? "" : "grid grid-cols-[300px_1fr]"}`}>
+			<div className="p-1 rounded-md absolute z-10 text-neutral-300 top-12 left-6 hover:bg-neutral-500/30" onClick={() => setIsVisible(prev => !prev)}>
+				<IoMdMenu size={20} />
+			</div>
 			{/* Sidebar */}
-			<div className="bg-neutral-800 h-screen">
+			<div className={` ${!isVisible ? "hidden" : "relative bg-neutral-800 h-screen"} `}>
 				<Sidebar
+					isVisible={isVisible}
 					setSelectedFile={setSelectedFile}
 					selectedFile={selectedFile}
 					files={files}
