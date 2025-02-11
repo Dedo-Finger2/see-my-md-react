@@ -16,9 +16,9 @@ import localStorageGetApiKey from "../api/repository/local-storage-get-api-key";
 function Home() {
 	const [files, setFiles] = useState<RepoFile[]>([]);
 	const [selectedFile, setSelectedFile] = useState<RepoFile>({
-		id: "",
-		path: "",
-		shortName: "",
+		id: "loading...",
+		path: "loading...",
+		shortName: "loading...",
 	});
 
 	const navigate = useNavigate();

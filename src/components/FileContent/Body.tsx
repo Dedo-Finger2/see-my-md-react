@@ -10,9 +10,10 @@ type BodyProps = {
 };
 
 function Body({ file }: BodyProps) {
-	const [fileContent, setFileContent] = useState("");
+	const [fileContent, setFileContent] = useState("Loading...");
 
 	useEffect(() => {
+		setFileContent("Loading...")
 		async function fetchData() {
 			const [configData] = localStorageGetConfigData();
 			const [apiKey] = localStorageGetApiKey();
@@ -33,7 +34,8 @@ function Body({ file }: BodyProps) {
 	return (
 		<div className="mt-24 flex flex-col gap-4 px-96 text-neutral-200 max-h-screen">
 			{/* Title */}
-			<h1 className="text-3xl font-bold">{file.shortName ?? "Loading..."}</h1>
+			<h1 className="text-3xl font-bold">{file.shortName ?? "Loading..."}
+			</h1>
 			{/* Content */}
 			<div
 				className="text-base/7 pb-132"
