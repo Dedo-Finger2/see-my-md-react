@@ -7,38 +7,38 @@ import ComingSoonPlatforms from "../components/Config/ComingSoonPlatforms";
 import SuportedPlatforms from "../components/Config/SuportedPlatforms";
 
 function ConfigPage() {
-  return (
-    <div className="flex items-center justify-between w-full h-screen">
-      {/* Center box */}
-      <div className="flex items-center justify-center w-full">
-        <div className="flex flex-col gap-8 border border-neutral-700 p-12 m-12 rounded-xl text-neutral-200">
-          <Link
-            className="relative group flex w-max hover:bg-neutral-600/50 rounded-sm p-1 cursor-default"
-            to="/"
-          >
-            <IoArrowBack size={20} />
-            <div className="hidden select-none absolute left-0 w-max bottom-8 px-2 bg-neutral-700 text-xs p-1 rounded-sm group-hover:block">
-              Go back
-            </div>
-          </Link>
-          {/* Title */}
-          <div className="select-none font-bold text-2xl">
-            <span>Configure your</span>{" "}
-            <span className="text-purple-500 underline underline-offset-8">
-              favorite
-            </span>{" "}
-            <span>platform</span>
-          </div>
-          {/* Platforms */}
-          <SuportedPlatforms />
-          {/* Coming Soon */}
-          <ComingSoonPlatforms />
-        </div>
-      </div>
-      {/* Sidebar */}
-      <PlatformSidebar icon={<FaGitlab />} name="Gitlab" />
-    </div>
-  );
+	return (
+		<div className="flex items-center justify-between w-full h-screen">
+			{/* Center box */}
+			<div className="flex items-center justify-center w-full">
+				<div className="flex flex-col gap-8 border border-neutral-700 p-12 m-12 rounded-xl text-neutral-200">
+					<Link
+						className="relative group flex w-max hover:bg-neutral-600/50 rounded-sm p-1 cursor-default"
+						to="/"
+					>
+						<IoArrowBack size={20} />
+						<div className="hidden select-none absolute left-0 w-max bottom-8 px-2 bg-neutral-700 text-xs p-1 rounded-sm group-hover:block">
+							Go back
+						</div>
+					</Link>
+					{/* Title */}
+					<div className="text-center lg:text-left select-none font-bold text-2xl">
+						<span>Configure your</span>{" "}
+						<span className="text-purple-500 underline underline-offset-8">
+							favorite
+						</span>{" "}
+						<span>platform</span>
+					</div>
+					{/* Platforms */}
+					<SuportedPlatforms />
+					{/* Coming Soon */}
+					<ComingSoonPlatforms />
+				</div>
+			</div>
+			{/* Sidebar */}
+			<PlatformSidebar icon={<FaGitlab />} name="Gitlab" />
+		</div>
+	);
 }
 
 export default ConfigPage;
