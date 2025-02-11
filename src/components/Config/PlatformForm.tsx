@@ -12,7 +12,7 @@ function PlatformForm() {
           descriptionContent="opa..."
         />
 
-        <Button content="Submit" />
+        <Button content="Submit" type={"submit"} />
       </form>
     </div>
   );
